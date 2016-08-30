@@ -18,10 +18,10 @@ public class Step1_FallingBlocksTest extends Assert {
     // - See the README for motivation
     // - Next step: RotatingPiecesOfBlocksTest
 
-    private final Board board = new Board(3, 3);
+    private static final Board board = new Board(3, 3);
 
 
-    public class A_new_board {
+    public class A_new_board{
 
         @Test
         public void is_empty() {
