@@ -4,14 +4,14 @@
 
 package tetris;
 
+import net.orfjackal.nestedjunit.NestedJUnit;
 import org.junit.*;
-import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 
 /**
  * @author Esko Luontola
  */
-@RunWith(Enclosed.class)
+@RunWith(NestedJUnit.class)
 public class Step3_RotatingTetrominoesTest extends Assert {
 
     // Step 3: The actual rotation algorithms
@@ -144,7 +144,12 @@ public class Step3_RotatingTetrominoesTest extends Assert {
         @Test
          public void rotating_it_twice_will_get_back_to_the_original_shape() {
             String originalShape = shape.toString();
-            shape = shape.rotateRight().rotateRight();
+            shape = shape.rotateRight();
+            String intermediate = shape.toString();
+            shape.rotateRight();
+            String inter2 = shape.toString();
+            System.out.println(intermediate);
+            System.out.println(inter2);
             assertEquals(originalShape, shape.toString());
             shape = shape.rotateLeft().rotateLeft();
             assertEquals(originalShape, shape.toString());

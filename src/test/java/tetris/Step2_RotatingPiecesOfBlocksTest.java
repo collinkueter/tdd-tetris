@@ -4,15 +4,15 @@
 
 package tetris;
 
+import net.orfjackal.nestedjunit.NestedJUnit;
 import org.junit.*;
-import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 
 /**
  * @author Esko Luontola
  */
 //@Ignore("contains no test")
-@RunWith(Enclosed.class)
+@RunWith(NestedJUnit.class)
 public class Step2_RotatingPiecesOfBlocksTest extends Assert {
 
     // Step 2: Stepping stone for rotation algorithms

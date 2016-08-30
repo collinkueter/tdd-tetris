@@ -4,12 +4,13 @@
 
 package tetris;
 
+import net.orfjackal.nestedjunit.NestedJUnit;
 import org.junit.*;
 import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 
 @Ignore("contains no test")
-@RunWith(Enclosed.class)
+@RunWith(NestedJUnit.class)
 public class Step6_RotatingAFallingPieceTest extends Assert {
 
     // Step 6: Training wheels off
